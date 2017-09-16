@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.hagk.dongni.HomeActivity;
+import com.hagk.dongni.activity.EmotionInfoActivity;
 import com.hagk.dongni.activity.LoginActivity;
 import com.hagk.dongni.activity.RegisterActivity;
 
@@ -104,6 +105,17 @@ public class RouteManager {
      */
     public void toLoginActivity(Activity act) {
         this.startActivity(act, LoginActivity.class);
+    }
+
+
+    /**
+     * 去情绪详情界面
+     * 作者：马阔
+     *
+     * @param act 当前所在activity
+     */
+    public void toEmotionInfoActivity(Activity act) {
+        this.startActivity(act, EmotionInfoActivity.class);
     }
 
 
