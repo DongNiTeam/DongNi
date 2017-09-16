@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <application
         android:name=".DnApplication"
         android:allowBackup="true"
@@ -17,19 +16,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".activity.DeviceActivity" />
-        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.GrowUpActivity" />
-        <activity android:name=".activity.BindingDeviceActivity"></activity>
+        <activity android:name=".activity.BindingDeviceActivity" />
         <activity android:name=".activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".activity.EmotionInfoActivity" />
+        <activity android:name=".activity.HActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".activity.EmotionInfoActivity"></activity>
     </application>
 
 </manifest>

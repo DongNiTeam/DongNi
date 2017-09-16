@@ -38,13 +38,13 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/input_box_bg"
+            android:background="@drawable/input_box_bg_focus"
             android:gravity="center_vertical"
             android:hint="@string/tv_input_num"
             android:inputType="phone"
             android:paddingLeft="20dp"
-            android:textColor="#999999"
-            android:textColorHint="#999999"
+            android:textColor="@color/colorInputBox"
+            android:textColorHint="@color/colorBeforInputBox"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -57,13 +57,13 @@
                 android:id="@+id/ed_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:background="@drawable/input_box_bg"
+                android:background="@drawable/input_box_bg_focus"
                 android:gravity="center_vertical"
                 android:hint="@string/tv_input_pwd"
                 android:paddingLeft="20dp"
                 android:password="true"
-                android:textColor="#999999"
-                android:textColorHint="#999999"
+                android:textColor="@color/colorInputBox"
+                android:textColorHint="@color/colorBeforInputBox"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

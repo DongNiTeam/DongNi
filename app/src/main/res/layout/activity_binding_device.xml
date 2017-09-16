@@ -46,7 +46,7 @@
             android:id="@+id/input_device_imei_num"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/input_box_bg"
+            android:background="@drawable/input_box_bg_is_no_focus"
             android:hint="输入手表的IMEI号"
             android:paddingLeft="30dp" />
 
@@ -82,7 +82,7 @@
             android:id="@+id/input_child_name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/input_box_bg"
+            android:background="@drawable/input_box_bg_is_no_focus"
             android:hint="输入孩子的名字号"
             android:paddingLeft="30dp" />
 
@@ -110,7 +110,7 @@
             android:id="@+id/input_device_phone_num"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/input_box_bg"
+            android:background="@drawable/input_box_bg_is_no_focus"
             android:hint="输入手表的电话号码"
             android:paddingLeft="30dp" />
 

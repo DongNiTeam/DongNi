@@ -9,6 +9,11 @@ import android.webkit.WebView;
 public class Constants {
 
     /**
+     * debug调试使用
+     */
+    public static  final String TAG_REGISTERACTIVITY = "RegisterActivity";
+
+    /**
      * 网络访问url
      */
     public static final String BASE_URL = "http://115.28.242.3:90";
@@ -47,6 +52,15 @@ public class Constants {
      * 登录界面
      */
     public static boolean isShowPwd = false;
+
+    /**
+     * 注册
+     */
+    public static String SEND_SMS = "send_sms";
+    public static String CHANGE_TXT = "change_txt";
+    public static String TIME_OVER = "time_over";
+    public static int WAIT_TIME = 6;
+
 
 
 }

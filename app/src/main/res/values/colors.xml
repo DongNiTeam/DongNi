@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorDevice">#57b1ef</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <!--输入后的文字的颜色-->
+    <color name="colorInputBox">#262626</color>
+    <!--hint的文字颜色-->
+    <color name="colorBeforInputBox">#999999</color>
 </resources>

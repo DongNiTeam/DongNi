@@ -24,14 +24,15 @@
         android:layout_height="35dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:background="@drawable/input_box_bg"
+        android:background="@drawable/input_box_bg_focus"
         android:hint="输入手机号码"
         android:inputType="phone"
         android:paddingBottom="2dp"
         android:paddingLeft="20dp"
         android:paddingRight="2dp"
         android:paddingTop="2dp"
-        android:textColor="#999999"
+        android:textColor="@color/colorInputBox"
+        android:textColorHint="@color/colorBeforInputBox"
         android:textSize="15sp" />
 
     <LinearLayout
@@ -47,14 +48,15 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/input_box_bg"
+            android:background="@drawable/input_box_bg_focus"
             android:hint="输入验证码"
             android:inputType="number"
             android:paddingBottom="2dp"
             android:paddingLeft="20dp"
             android:paddingRight="2dp"
             android:paddingTop="2dp"
-            android:textColor="#999999"
+            android:textColor="@color/colorInputBox"
+            android:textColorHint="@color/colorBeforInputBox"
             android:textSize="15sp" />
 
         <TextView
@@ -79,13 +81,14 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/input_box_bg"
+        android:background="@drawable/input_box_bg_focus"
         android:hint="输入密码"
         android:paddingBottom="2dp"
         android:paddingLeft="20dp"
         android:paddingRight="2dp"
         android:paddingTop="2dp"
-        android:textColor="#999999"
+        android:textColor="@color/colorInputBox"
+        android:textColorHint="@color/colorBeforInputBox"
         android:textSize="15sp" />
 
     <EditText
@@ -95,13 +98,14 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/input_box_bg"
+        android:background="@drawable/input_box_bg_focus"
         android:hint="再次输入密码"
         android:paddingBottom="2dp"
         android:paddingLeft="20dp"
         android:paddingRight="2dp"
         android:paddingTop="2dp"
-        android:textColor="#999999"
+        android:textColor="@color/colorInputBox"
+        android:textColorHint="@color/colorBeforInputBox"
         android:textSize="15sp" />
 
 
