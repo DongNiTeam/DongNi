@@ -15,7 +15,6 @@
         android:layout_marginTop="26.7dp"
         android:src="@drawable/home_menu_bg" />
 
-
     <RelativeLayout
         android:id="@+id/rl_right_device"
         android:layout_width="33.3dp"
