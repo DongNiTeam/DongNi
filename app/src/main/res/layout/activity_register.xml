@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.hagk.dongni.activity.RegisterActivity">
 
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_user_icon" />
+
+    <EditText
+        android:id="@+id/phone_num"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/input_box_bg"
+        android:hint="输入手机号码"
+        android:inputType="phone"
+        android:paddingBottom="2dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+
     <LinearLayout
-        android:id="@+id/ll_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/layout_title" />
-
-        <ImageView
-            android:id="@+id/user_icon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="40dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/login_user_icon" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/phone_num"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:id="@+id/input_sms"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
             android:background="@drawable/input_box_bg"
-            android:hint="输入手机号码"
-            android:inputType="phone"
+            android:hint="输入验证码"
+            android:inputType="number"
             android:paddingBottom="2dp"
             android:paddingLeft="20dp"
             android:paddingRight="2dp"
@@ -39,86 +57,61 @@
             android:textColor="#999999"
             android:textSize="15sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/input_sms"
-                android:layout_width="0dp"
-                android:layout_height="31dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/input_box_bg"
-                android:hint="输入验证码"
-                android:inputType="number"
-                android:paddingBottom="2dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="2dp"
-                android:paddingTop="2dp"
-                android:textColor="#999999"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/get_sms"
-                android:layout_width="0dp"
-                android:layout_height="31dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_sms_code"
-                android:gravity="center"
-                android:text="@string/tv_get_sms"
-                android:textColor="@color/colorWhite"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/pwd"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:layout_marginLeft="40dp"
+        <TextView
+            android:id="@+id/get_sms"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/input_box_bg"
-            android:hint="输入密码"
-            android:paddingBottom="2dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="2dp"
-            android:paddingTop="2dp"
-            android:textColor="#999999"
+            android:layout_weight="1"
+            android:background="@drawable/btn_sms_code"
+            android:gravity="center"
+            android:text="@string/tv_get_sms"
+            android:textColor="@color/colorWhite"
             android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/re_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/input_box_bg"
-            android:hint="再次输入密码"
-            android:paddingBottom="2dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="2dp"
-            android:paddingTop="2dp"
-            android:textColor="#999999"
-            android:textSize="15sp" />
-
-
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_box_bg"
+        android:hint="输入密码"
+        android:paddingBottom="2dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/re_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_box_bg"
+        android:hint="再次输入密码"
+        android:paddingBottom="2dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+
 
     <TextView
         android:id="@+id/btn_register"
         android:layout_width="121dp"
-        android:layout_marginTop="60dp"
         android:layout_height="42dp"
-        android:layout_below="@id/ll_login"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_regeict"
         android:gravity="center"
         android:text="@string/tv_regeict"
@@ -126,4 +119,4 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

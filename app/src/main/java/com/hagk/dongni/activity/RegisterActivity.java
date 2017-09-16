@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hagk.dongni.R;
+import com.hagk.dongni.utils.PhoneNumUtils;
 
 /**
  * 描述 : 账号注册界面
@@ -73,7 +74,12 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             case R.id.btn_register:
                 //注册
                 showToast("注册");
-
+                String num = phontNum.getText().toString().trim();
+                if(PhoneNumUtils.checkMobileNO(num)){
+                    showToast("手机号码合法!!!");
+                }else{
+                    showToast("手机号码不合法, 请输入正确的手机号码...");
+                }
                 break;
         }
     }

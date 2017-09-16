@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.hagk.dongni.R;
 import com.hagk.dongni.constant.Constants;
+import com.hagk.dongni.manager.RouteManager;
 
 /**
  * 描述 : 登录界面
@@ -71,7 +72,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 showToast("点了");
                 break;
             case R.id.tv_go_register:
-                showToast("点了");
+                RouteManager.getInstance().toRegisterActivity(LoginActivity.this);
                 break;
             case R.id.tv_go_forget_pwd:
                 showToast("点了");
