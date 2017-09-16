@@ -112,6 +112,7 @@ public class RouteManager {
      * 去情绪详情界面
      * 作者：马阔
      *
+     *   
      * @param act 当前所在activity
      */
     public void toEmotionInfoActivity(Activity act) {
