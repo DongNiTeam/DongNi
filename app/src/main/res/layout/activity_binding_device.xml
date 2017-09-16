@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4F2E6"
+    android:orientation="vertical"
+    tools:context="com.hagk.dongni.activity.BindingDeviceActivity">
+
+    <include layout="@layout/layout_title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/bind_device_bg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/binding_bg" />
+
+        <TextView
+            android:id="@+id/tv_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/tv_binding"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="88dp">
+
+        <EditText
+            android:id="@+id/input_device_imei_num"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_box_bg"
+            android:hint="输入手表的IMEI号"
+            android:paddingLeft="30dp" />
+
+        <ImageView
+            android:id="@+id/scan_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/scan_bg" />
+
+        <ImageView
+            android:id="@+id/delete_device_imei_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/scan_input"
+            android:src="@drawable/delete_bg"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="17dp">
+
+        <EditText
+            android:id="@+id/input_child_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_box_bg"
+            android:hint="输入孩子的名字号"
+            android:paddingLeft="30dp" />
+
+
+        <ImageView
+            android:id="@+id/delete_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/delete_bg"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="17dp">
+
+        <EditText
+            android:id="@+id/input_device_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_box_bg"
+            android:hint="输入手表的电话号码"
+            android:paddingLeft="30dp" />
+
+        <ImageView
+            android:id="@+id/delete_device_phone_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/delete_bg"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

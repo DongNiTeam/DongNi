@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hagk.dongni.activity.LoginActivity">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <ImageView
+            android:id="@+id/login_user_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/login_user_icon" />
+
+        <TextView
+            android:id="@+id/tv_error_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="@string/tv_error_pwd"
+            android:textColor="#fa0b1c"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/ed_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/tv_input_num"
+            android:inputType="phone"
+            android:paddingLeft="20dp"
+            android:textColor="#999999"
+            android:textColorHint="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/ed_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_box_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/tv_input_pwd"
+                android:paddingLeft="20dp"
+                android:password="true"
+                android:textColor="#999999"
+                android:textColorHint="#999999"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_show_pwd_click"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/im_show_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/home_call_confirm_bg"
+            android:hint="@string/tv_login"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_go_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_go_register"
+                android:textColor="#1468e0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_go_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/tv_forget_pwd"
+                android:textColor="#1468e0"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
