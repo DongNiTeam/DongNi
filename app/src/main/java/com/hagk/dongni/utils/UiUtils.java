@@ -1,8 +1,8 @@
 package com.hagk.dongni.utils;
 
 /**
- * des      : 操作UI的工具类
- * author   : geaosu
+ * 描述 : 操作UI的工具类
+ * 作者 : geaosu
  */
 public class UiUtils {
 

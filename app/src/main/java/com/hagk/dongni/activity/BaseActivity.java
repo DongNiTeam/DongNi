@@ -37,7 +37,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         //EventBus.getDefault().register(this);
         setContentView(getContentView());
         init(savedInstanceState);
-
     }
 
     @Override
