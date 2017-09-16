@@ -25,8 +25,8 @@ public class DnApplication extends Application {
         NoHttp.initialize(this, new NoHttp.Config()
                 .setConnectTimeout(30 * 1000) // 全局连接超时时间，单位毫秒。
                 .setReadTimeout(30 * 1000) // 全局服务器响应超时时间，单位毫秒。
-                .setCacheStore(new DiskCacheStore(this))//缓存到sd卡中;
-                //.setNetworkExecutor(new URLConnectionNetworkExecutor()) // 使用HttpURLConnection做网络层。
+                //.setCacheStore(new DiskCacheStore(this))//缓存到sd卡中;
+                .setNetworkExecutor(new URLConnectionNetworkExecutor()) // 使用HttpURLConnection做网络层。
         );
 
         //配置NoHttp的调试模式

@@ -11,10 +11,11 @@ public class Constants {
     /**
      * debug调试使用
      */
-    public static  final String TAG_REGISTERACTIVITY = "RegisterActivity";
+    public static final String TAG_REGISTERACTIVITY = "RegisterActivity";
 
     /**
      * 网络访问url
+     * 除了和问卷有关的，剩下的都是90端口
      */
     public static final String BASE_URL = "http://115.28.242.3:90";
     //public static final String ALBUM_PATH = Environment.getExternalStorageDirectory() + "/location/";
@@ -56,11 +57,12 @@ public class Constants {
     /**
      * 注册
      */
+    //http://115.28.242.3:90/api/user/sendCode
+    public static String GET_SMS_URL = BASE_URL + "/api/user/sendCode";
     public static String SEND_SMS = "send_sms";
     public static String CHANGE_TXT = "change_txt";
     public static String TIME_OVER = "time_over";
     public static int WAIT_TIME = 6;
-
 
 
 }

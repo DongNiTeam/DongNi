@@ -14,6 +14,15 @@ import com.hagk.dongni.R;
 import com.hagk.dongni.constant.Constants;
 import com.hagk.dongni.utils.LogUtils;
 import com.hagk.dongni.utils.PhoneNumUtils;
+import com.yanzhenjie.nohttp.Logger;
+import com.yanzhenjie.nohttp.NoHttp;
+import com.yanzhenjie.nohttp.RequestMethod;
+import com.yanzhenjie.nohttp.rest.JsonObjectRequest;
+import com.yanzhenjie.nohttp.rest.Request;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 import javax.xml.transform.sax.TransformerHandler;
 
@@ -84,7 +93,20 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                             /**
                              * 请求网络发送短信
                              * 根据服务器返回的结果判断短信是否发送成功
+                             * http://115.28.242.3:90/api/user/sendCode?telephone=17629003561
+                             * http://115.28.242.3:91/api/user/sendCode?telephone=17629003561
+                             * http://115.28.242.3:90/api/user/sendCode?telephone=17629003561&name=hehe
                              */
+
+                            HashMap<String,String> map = new HashMap();
+                            map.put("telephone", phone);
+                            String url = Constants.GET_SMS_URL;
+                            Logger.i(url);
+                            Request<JSONObject> request = NoHttp.createJsonObjectRequest(url, RequestMethod.POST);
+//                            Logger.i("短信验证码的返回数据的toString"+request.toString());
+//                            Logger.i("短信验证码的返回数据的元数据"+request);
+                            LogUtils.e(Constants.TAG_REGISTERACTIVITY,"短信验证码的返回数据的元数据 = "+request);
+
                             isSent = true;
                             //将背景图片变为灰色
                             getSms.setBackground(getResources().getDrawable(R.drawable.register_wait_time));
@@ -99,7 +121,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.btn_register:
                 //注册按钮
-
                 break;
         }
     }
@@ -117,14 +138,14 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     Thread.sleep(1000);
                     count--;
                     if (count <= 1) {
-                        Message msg = new Message();
+                        Message msg = handler.obtainMessage();
                         msg.obj = Constants.TIME_OVER;
                         handler.sendMessage(msg);
 
                         return;
                     } else {
                         isSent = false;
-                        Message msg = new Message();
+                        Message msg = handler.obtainMessage();
                         msg.obj = Constants.CHANGE_TXT;
                         handler.sendMessage(msg);
                         waitForSendSmsAgain();
@@ -135,28 +156,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 }
             }
         }).start();
-
-
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                count -= count;
-//                String btnStartText = "获取验证码(";
-//                String btnEndText = ")";
-//                String txt = btnStartText + count + btnEndText;
-//                if (count <= 1) {
-//                    //恢复到以前
-//                    getSms.setBackground(getResources().getDrawable(R.drawable.btn_sms_code));
-//                    getSms.setTextColor(getResources().getColor(R.color.colorWhite));
-//                    getSms.setText(getResources().getString(R.string.tv_get_sms));
-//                    return;
-//                } else {
-//                    getSms.setText(txt);
-//                    waitForSendSmsAgain();
-//                }
-//
-//            }
-//        });
     }
 
     Handler handler = new Handler() {
