@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
@@ -20,12 +21,15 @@ import android.widget.Toast;
 
 import com.hagk.dongni.R;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * 描述 : activity的基类
  * 作者 : geaosu
  */
 public abstract class BaseActivity extends AppCompatActivity {
-
     private Dialog mDialog;
     private TextView tvLoading;
     private ImageView ivLoading;
