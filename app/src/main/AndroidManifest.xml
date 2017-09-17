@@ -31,10 +31,6 @@
 
         </activity>
         <activity android:name=".activity.EmotionInfoActivity" />
-        <activity android:name=".activity.HActivity">
-
-
-        </activity>
     </application>
 
 </manifest>
